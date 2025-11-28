@@ -1,6 +1,6 @@
-import { ToggleModeTheme } from "./toggleModeTheme"
 import { Avatar, AvatarImage } from "./ui/avatar"
 import { Cart } from "./Cart"
+import { ToggleModeTheme } from "./ToggleModeTheme"
 
 export const Header = () => {
     return (

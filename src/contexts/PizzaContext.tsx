@@ -6,7 +6,8 @@ import { createContext, ReactNode, useContext, useMemo, useReducer } from "react
 
 type PizzaContextType = {
     itemsCart: PizzaListType[]
-    totalValue: number
+    subtotalValue: number
+    deliveryValue: number
     addPizza: (item: PizzaListType) => void
     removePizza: (id: string) => void
     increaseQuantity: (id: string) => void
@@ -56,7 +57,7 @@ export const PizzaProvider = ({ children }: Props) => {
         })
     }
 
-    const totalValue = useMemo(() => {
+    const subtotalValue = useMemo(() => {
     return itemsCart.reduce((vAccumulated, item) => {
         return vAccumulated + item.price * item.amount;
     }, 0);
@@ -64,7 +65,7 @@ export const PizzaProvider = ({ children }: Props) => {
 
     return (
         // Aqui eu criei as funções e passei elas no value do PostContext.Provider, pois é mais seguro do que passar o dispatch direto
-        <PizzaContext.Provider value={{ itemsCart, totalValue, addPizza, removePizza, increaseQuantity, decreaseQuantity }}>
+        <PizzaContext.Provider value={{ itemsCart, subtotalValue, deliveryValue:10, addPizza, removePizza, increaseQuantity, decreaseQuantity }}>
             {children}
         </PizzaContext.Provider>
     )
