@@ -1,7 +1,11 @@
-import { Footer } from "@/components/Footer"
-import { Header } from "@/components/Header"
-import { PizzaList } from "@/components/PizzaList"
+"use client"
+
+import { Footer } from "@/components/interface/Footer"
+import { Header } from "@/components/interface/Header"
+import { PizzaList } from "@/components/products/PizzaList"
+import { SkeletonList } from "@/components/products/Skeleton"
 import { PizzaProvider } from "@/contexts/PizzaContext"
+import { Suspense } from "react"
 
 const Page = () => {
   return (
@@ -10,8 +14,10 @@ const Page = () => {
       <PizzaProvider>
         <Header />
 
-        <main className="flex-1 mb-5">
-          <PizzaList />
+        <main className="flex-1 mb-5 p-4">
+          <Suspense fallback={<SkeletonList/>}>
+            <PizzaList/>
+          </Suspense>
         </main>
       </PizzaProvider>
 

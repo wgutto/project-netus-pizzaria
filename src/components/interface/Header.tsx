@@ -1,5 +1,5 @@
-import { Avatar, AvatarImage } from "./ui/avatar"
-import { Cart } from "./Cart"
+import { Cart } from "../cart/Cart"
+import { Avatar, AvatarImage } from "../ui/avatar"
 import { ToggleModeTheme } from "./ToggleModeTheme"
 
 export const Header = () => {

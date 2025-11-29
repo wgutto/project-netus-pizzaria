@@ -4,9 +4,9 @@ export const PizzasSavoryList: PizzaListType[] = [
     {
         id: crypto.randomUUID(),
         img: "/pizzas-images/pizza-savory.png",
-        flavor: "Calabresa Tradicional",
+        flavor: "Frango com Catupiry",
         amount: 1,
-        ingredients: ["Calabresa", "Mussarela", "Cebola", "Orégano", "Molho de tomate"],
+        ingredients: ["Frango desfiado", "Catupiry", "Mussarela", "Milho", "Molho de tomate"],
         sizes: [
             { label: "P", price: 22.5 },
             { label: "M", price: 32.5 },
@@ -17,9 +17,9 @@ export const PizzasSavoryList: PizzaListType[] = [
     {
         id: crypto.randomUUID(),
         img: "/pizzas-images/pizza-savory.png",
-        flavor: "Calabresa Premium",
+        flavor: "Quatro Queijos",
         amount: 1,
-        ingredients: ["Calabresa premium", "Mussarela", "Cebola roxa", "Orégano", "Molho de tomate"],
+        ingredients: ["Mussarela", "Parmesão", "Gorgonzola", "Provolone", "Molho branco"],
         sizes: [
             { label: "P", price: 32.5 },
             { label: "M", price: 42.5 },
@@ -30,9 +30,9 @@ export const PizzasSavoryList: PizzaListType[] = [
     {
         id: crypto.randomUUID(),
         img: "/pizzas-images/pizza-savory.png",
-        flavor: "Calabresa Artesanal",
+        flavor: "Portuguesa",
         amount: 1,
-        ingredients: ["Calabresa artesanal", "Mussarela especial", "Cebola caramelizada", "Molho de tomate", "Orégano"],
+        ingredients: ["Presunto", "Mussarela", "Ovo", "Cebola", "Azeitonas", "Pimentão", "Molho de tomate"],
         sizes: [
             { label: "P", price: 42.5 },
             { label: "M", price: 52.5 },
@@ -43,9 +43,9 @@ export const PizzasSavoryList: PizzaListType[] = [
     {
         id: crypto.randomUUID(),
         img: "/pizzas-images/pizza-savory.png",
-        flavor: "Calabresa com Cheddar",
+        flavor: "Pepperoni",
         amount: 1,
-        ingredients: ["Calabresa premium", "Cheddar", "Mussarela", "Cebola", "Molho de tomate"],
+        ingredients: ["Pepperoni", "Mussarela", "Molho de tomate", "Orégano"],
         sizes: [
             { label: "P", price: 52.5 },
             { label: "M", price: 62.5 },
@@ -56,9 +56,9 @@ export const PizzasSavoryList: PizzaListType[] = [
     {
         id: crypto.randomUUID(),
         img: "/pizzas-images/pizza-savory.png",
-        flavor: "Calabresa Especial",
+        flavor: "Bacon Crocante",
         amount: 1,
-        ingredients: ["Calabresa", "Mussarela", "Cebola", "Pimentão", "Molho de tomate"],
+        ingredients: ["Bacon", "Mussarela", "Cebola", "Molho de tomate"],
         sizes: [
             { label: "P", price: 28.5 },
             { label: "M", price: 38.5 },
@@ -69,9 +69,9 @@ export const PizzasSavoryList: PizzaListType[] = [
     {
         id: crypto.randomUUID(),
         img: "/pizzas-images/pizza-savory.png",
-        flavor: "Calabresa com Azeitonas",
+        flavor: "Marguerita",
         amount: 1,
-        ingredients: ["Calabresa", "Mussarela", "Cebola", "Azeitonas", "Molho de tomate"],
+        ingredients: ["Mussarela", "Tomate", "Manjericão", "Molho de tomate"],
         sizes: [
             { label: "P", price: 30.5 },
             { label: "M", price: 40.5 },
@@ -82,9 +82,9 @@ export const PizzasSavoryList: PizzaListType[] = [
     {
         id: crypto.randomUUID(),
         img: "/pizzas-images/pizza-savory.png",
-        flavor: "Calabresa com Orégano",
+        flavor: "Napolitana",
         amount: 1,
-        ingredients: ["Calabresa", "Mussarela", "Molho de tomate", "Orégano"],
+        ingredients: ["Mussarela", "Tomate", "Parmesão", "Molho de tomate", "Orégano"],
         sizes: [
             { label: "P", price: 27.9 },
             { label: "M", price: 37.9 },
@@ -92,13 +92,12 @@ export const PizzasSavoryList: PizzaListType[] = [
         ],
         price: 27.9
     },
-    // ---- ADICIONANDO MAIS 5 PARA TOTALIZAR 12 ----
     {
         id: crypto.randomUUID(),
         img: "/pizzas-images/pizza-savory.png",
-        flavor: "Calabresa Dupla",
+        flavor: "Carne Seca com Catupiry",
         amount: 1,
-        ingredients: ["Calabresa dupla", "Mussarela extra", "Cebola", "Molho de tomate"],
+        ingredients: ["Carne seca desfiada", "Catupiry", "Cebola roxa", "Mussarela", "Molho de tomate"],
         sizes: [
             { label: "P", price: 35.9 },
             { label: "M", price: 45.9 },
@@ -109,9 +108,9 @@ export const PizzasSavoryList: PizzaListType[] = [
     {
         id: crypto.randomUUID(),
         img: "/pizzas-images/pizza-savory.png",
-        flavor: "Calabresa com Catupiry",
+        flavor: "Lombo Canadense",
         amount: 1,
-        ingredients: ["Calabresa", "Catupiry", "Mussarela", "Molho de tomate"],
+        ingredients: ["Lombo canadense", "Mussarela", "Cebola", "Molho de tomate"],
         sizes: [
             { label: "P", price: 34.5 },
             { label: "M", price: 44.5 },
@@ -122,9 +121,9 @@ export const PizzasSavoryList: PizzaListType[] = [
     {
         id: crypto.randomUUID(),
         img: "/pizzas-images/pizza-savory.png",
-        flavor: "Calabresa Picante",
+        flavor: "Strogonoff de Frango",
         amount: 1,
-        ingredients: ["Calabresa apimentada", "Mussarela", "Cebola", "Pimenta calabresa", "Molho de tomate"],
+        ingredients: ["Strogonoff de frango", "Batata palha", "Mussarela"],
         sizes: [
             { label: "P", price: 33.9 },
             { label: "M", price: 43.9 },
@@ -135,9 +134,9 @@ export const PizzasSavoryList: PizzaListType[] = [
     {
         id: crypto.randomUUID(),
         img: "/pizzas-images/pizza-savory.png",
-        flavor: "Calabresa Caseira",
+        flavor: "Atum com Cebola",
         amount: 1,
-        ingredients: ["Calabresa caseira", "Mussarela", "Cebola roxa", "Molho de tomate"],
+        ingredients: ["Atum", "Cebola", "Mussarela", "Azeitonas", "Molho de tomate"],
         sizes: [
             { label: "P", price: 31.9 },
             { label: "M", price: 41.9 },
@@ -148,9 +147,9 @@ export const PizzasSavoryList: PizzaListType[] = [
     {
         id: crypto.randomUUID(),
         img: "/pizzas-images/pizza-savory.png",
-        flavor: "Calabresa com Bacon",
+        flavor: "Milho e Bacon",
         amount: 1,
-        ingredients: ["Calabresa", "Bacon", "Mussarela", "Cebola", "Molho de tomate"],
+        ingredients: ["Milho", "Bacon", "Mussarela", "Molho de tomate"],
         sizes: [
             { label: "P", price: 36.5 },
             { label: "M", price: 46.5 },
@@ -159,6 +158,7 @@ export const PizzasSavoryList: PizzaListType[] = [
         price: 36.5
     }
 ];
+
 
 
 export const PizzasSweetList: PizzaListType[] = [
