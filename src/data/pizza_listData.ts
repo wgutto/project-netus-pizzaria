@@ -1,6 +1,9 @@
 import { PizzaListType } from "@/types/pizza_listType";
 
-export const PizzasSavoryList: PizzaListType[] = [
+export const AllPizzasList: PizzaListType[] = [
+    // -------------------
+    // PIZZAS SALGADAS
+    // -------------------
     {
         id: crypto.randomUUID(),
         img: "/pizzas-images/pizza-savory.png",
@@ -168,11 +171,11 @@ export const PizzasSavoryList: PizzaListType[] = [
             { label: "G", price: 56.5 }
         ],
         price: 36.5
-    }
-];
+    },
 
-
-export const PizzasSweetList: PizzaListType[] = [
+    // -------------------
+    // PIZZAS DOCES
+    // -------------------
     {
         id: crypto.randomUUID(),
         img: "/pizzas-images/pizza-sweet.png",
@@ -258,4 +261,3 @@ export const PizzasSweetList: PizzaListType[] = [
         price: 28.5
     }
 ];
-

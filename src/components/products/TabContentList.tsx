@@ -12,17 +12,17 @@ import { usePizza } from "@/contexts/PizzaContext"
 
 type Props = {
     value: string
-    listItem: PizzaListType[]
+    products: PizzaListType[]
 }
-export const TabContentList = ({ value, listItem }: Props) => {
+export const TabContentList = ({ value, products }: Props) => {
     const [selectedSizes, setSelectedSizes] = useState<{ [id: string]: string }>({});
     const pizzaContext = usePizza()
 
     return (
         <TabsContent value={value}>
-            {listItem.length > 0 &&
+            {products.length > 0 &&
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 my-6">
-                    {listItem.map((item) =>
+                    {products.map((item) =>
                         <Card key={item.id}>
                             <CardHeader className="flex justify-center">
                                 <Avatar className="w-28 h-28">

@@ -3,22 +3,43 @@
 import { TabContentList } from "./TabContentList"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../ui/tabs"
 import { Frown } from "lucide-react"
-import { PizzasSavoryList, PizzasSweetList } from "@/data/pizza_listData"
+import { AllPizzasList } from "@/data/pizza_listData"
+import { PizzaListType } from "@/types/pizza_listType"
+
+type Tab = {
+    title: string
+    value: string
+    products: PizzaListType[]
+}
 
 export const PizzaList =  () => {
 
+    const tabs: Tab[] = [
+        {
+            title: "Pizza Salgadas",
+            value: "savory",
+            products: AllPizzasList.filter((pizza) => pizza.category === "savory")
+        },
+        {
+            title: "Pizza Doces",
+            value: "sweet",
+            products: AllPizzasList.filter((pizza) => pizza.category === "sweet")
+        }
+    ]
+
     return (
         <Tabs defaultValue="savory" className="max-w-7xl mx-auto">
-            {}
             <TabsList className="w-full">
-                <TabsTrigger value="savory" className="cursor-pointer">Pizzas Salgadas</TabsTrigger>
-                <TabsTrigger value="sweet" className="cursor-pointer">Pizzas Doces</TabsTrigger>
-                <TabsTrigger value="pastries" className="cursor-pointer">Pastéis</TabsTrigger>
-                <TabsTrigger value="calzone" className="cursor-pointer">Calzone</TabsTrigger>
+                {tabs.map((pizza) => 
+                    <TabsTrigger key={pizza.value} value={pizza.value} className="cursor-pointer">{pizza.title}</TabsTrigger>
+                )}
+                <TabsTrigger value="pastries">Pastéis</TabsTrigger>
+                <TabsTrigger value="calzone">Calzone</TabsTrigger>
             </TabsList>
-            <TabContentList value="savory" listItem={PizzasSavoryList}/>
 
-            <TabContentList value="sweet" listItem={PizzasSweetList}/>
+            {tabs.map((pizza) =>
+                    <TabContentList key={pizza.value} value={pizza.value} products={pizza.products}/>
+            )}
 
             <TabsContent value="pastries">
                 <div className="flex flex-col gap-5 items-center my-10">

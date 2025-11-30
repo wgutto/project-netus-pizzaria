@@ -1,4 +1,3 @@
-import { PizzasSweetList } from "@/data/pizza_listData"
 import { Skeleton } from "../ui/skeleton"
 
 export const SkeletonList = () => {
@@ -8,7 +7,7 @@ export const SkeletonList = () => {
 
             <div className="mt-6 grid gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
-                {Array.from({length: PizzasSweetList.length}, (item, index) => 
+                {Array.from({length: 6}, (item, index) => 
                     <div key={index}>
                         <Skeleton className="w-full h-70"/>
                     </div>
