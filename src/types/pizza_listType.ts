@@ -4,6 +4,7 @@ export type PizzaListType = {
     flavor: string;
     amount: number;
     ingredients: string[];
+    category: string
     sizes: {label: string; price: number}[]
     size?: string
     price: number

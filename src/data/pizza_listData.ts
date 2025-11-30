@@ -6,6 +6,7 @@ export const PizzasSavoryList: PizzaListType[] = [
         img: "/pizzas-images/pizza-savory.png",
         flavor: "Frango com Catupiry",
         amount: 1,
+        category: "savory",
         ingredients: ["Frango desfiado", "Catupiry", "Mussarela", "Milho", "Molho de tomate"],
         sizes: [
             { label: "P", price: 22.5 },
@@ -19,6 +20,7 @@ export const PizzasSavoryList: PizzaListType[] = [
         img: "/pizzas-images/pizza-savory.png",
         flavor: "Quatro Queijos",
         amount: 1,
+        category: "savory",
         ingredients: ["Mussarela", "Parmesão", "Gorgonzola", "Provolone", "Molho branco"],
         sizes: [
             { label: "P", price: 32.5 },
@@ -32,6 +34,7 @@ export const PizzasSavoryList: PizzaListType[] = [
         img: "/pizzas-images/pizza-savory.png",
         flavor: "Portuguesa",
         amount: 1,
+        category: "savory",
         ingredients: ["Presunto", "Mussarela", "Ovo", "Cebola", "Azeitonas", "Pimentão", "Molho de tomate"],
         sizes: [
             { label: "P", price: 42.5 },
@@ -45,6 +48,7 @@ export const PizzasSavoryList: PizzaListType[] = [
         img: "/pizzas-images/pizza-savory.png",
         flavor: "Pepperoni",
         amount: 1,
+        category: "savory",
         ingredients: ["Pepperoni", "Mussarela", "Molho de tomate", "Orégano"],
         sizes: [
             { label: "P", price: 52.5 },
@@ -58,6 +62,7 @@ export const PizzasSavoryList: PizzaListType[] = [
         img: "/pizzas-images/pizza-savory.png",
         flavor: "Bacon Crocante",
         amount: 1,
+        category: "savory",
         ingredients: ["Bacon", "Mussarela", "Cebola", "Molho de tomate"],
         sizes: [
             { label: "P", price: 28.5 },
@@ -71,6 +76,7 @@ export const PizzasSavoryList: PizzaListType[] = [
         img: "/pizzas-images/pizza-savory.png",
         flavor: "Marguerita",
         amount: 1,
+        category: "savory",
         ingredients: ["Mussarela", "Tomate", "Manjericão", "Molho de tomate"],
         sizes: [
             { label: "P", price: 30.5 },
@@ -84,6 +90,7 @@ export const PizzasSavoryList: PizzaListType[] = [
         img: "/pizzas-images/pizza-savory.png",
         flavor: "Napolitana",
         amount: 1,
+        category: "savory",
         ingredients: ["Mussarela", "Tomate", "Parmesão", "Molho de tomate", "Orégano"],
         sizes: [
             { label: "P", price: 27.9 },
@@ -97,6 +104,7 @@ export const PizzasSavoryList: PizzaListType[] = [
         img: "/pizzas-images/pizza-savory.png",
         flavor: "Carne Seca com Catupiry",
         amount: 1,
+        category: "savory",
         ingredients: ["Carne seca desfiada", "Catupiry", "Cebola roxa", "Mussarela", "Molho de tomate"],
         sizes: [
             { label: "P", price: 35.9 },
@@ -110,6 +118,7 @@ export const PizzasSavoryList: PizzaListType[] = [
         img: "/pizzas-images/pizza-savory.png",
         flavor: "Lombo Canadense",
         amount: 1,
+        category: "savory",
         ingredients: ["Lombo canadense", "Mussarela", "Cebola", "Molho de tomate"],
         sizes: [
             { label: "P", price: 34.5 },
@@ -123,6 +132,7 @@ export const PizzasSavoryList: PizzaListType[] = [
         img: "/pizzas-images/pizza-savory.png",
         flavor: "Strogonoff de Frango",
         amount: 1,
+        category: "savory",
         ingredients: ["Strogonoff de frango", "Batata palha", "Mussarela"],
         sizes: [
             { label: "P", price: 33.9 },
@@ -136,6 +146,7 @@ export const PizzasSavoryList: PizzaListType[] = [
         img: "/pizzas-images/pizza-savory.png",
         flavor: "Atum com Cebola",
         amount: 1,
+        category: "savory",
         ingredients: ["Atum", "Cebola", "Mussarela", "Azeitonas", "Molho de tomate"],
         sizes: [
             { label: "P", price: 31.9 },
@@ -149,6 +160,7 @@ export const PizzasSavoryList: PizzaListType[] = [
         img: "/pizzas-images/pizza-savory.png",
         flavor: "Milho e Bacon",
         amount: 1,
+        category: "savory",
         ingredients: ["Milho", "Bacon", "Mussarela", "Molho de tomate"],
         sizes: [
             { label: "P", price: 36.5 },
@@ -160,13 +172,13 @@ export const PizzasSavoryList: PizzaListType[] = [
 ];
 
 
-
 export const PizzasSweetList: PizzaListType[] = [
     {
         id: crypto.randomUUID(),
         img: "/pizzas-images/pizza-sweet.png",
         flavor: "Chocolate com Morango",
         amount: 1,
+        category: "sweet",
         ingredients: ["Chocolate ao leite", "Morango", "Granulado", "Creme doce"],
         sizes: [
             { label: "P", price: 29.9 },
@@ -180,6 +192,7 @@ export const PizzasSweetList: PizzaListType[] = [
         img: "/pizzas-images/pizza-sweet.png",
         flavor: "Prestígio",
         amount: 1,
+        category: "sweet",
         ingredients: ["Chocolate ao leite", "Coco ralado", "Creme de coco"],
         sizes: [
             { label: "P", price: 27.5 },
@@ -193,6 +206,7 @@ export const PizzasSweetList: PizzaListType[] = [
         img: "/pizzas-images/pizza-sweet.png",
         flavor: "Ovomaltine",
         amount: 1,
+        category: "sweet",
         ingredients: ["Chocolate ao leite", "Creme Ovomaltine", "Flocos crocantes"],
         sizes: [
             { label: "P", price: 32.9 },
@@ -206,6 +220,7 @@ export const PizzasSweetList: PizzaListType[] = [
         img: "/pizzas-images/pizza-sweet.png",
         flavor: "Nutella com Banana",
         amount: 1,
+        category: "sweet",
         ingredients: ["Nutella", "Banana", "Açúcar mascavo"],
         sizes: [
             { label: "P", price: 36.9 },
@@ -219,6 +234,7 @@ export const PizzasSweetList: PizzaListType[] = [
         img: "/pizzas-images/pizza-sweet.png",
         flavor: "Romeu e Julieta",
         amount: 1,
+        category: "sweet",
         ingredients: ["Goiabada", "Queijo minas", "Açúcar cristal"],
         sizes: [
             { label: "P", price: 26.9 },
@@ -232,6 +248,7 @@ export const PizzasSweetList: PizzaListType[] = [
         img: "/pizzas-images/pizza-sweet.png",
         flavor: "Brigadeiro",
         amount: 1,
+        category: "sweet",
         ingredients: ["Chocolate ao leite", "Creme de brigadeiro", "Granulado"],
         sizes: [
             { label: "P", price: 28.5 },
