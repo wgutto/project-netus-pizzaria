@@ -1,4 +1,4 @@
-import { PizzaListType } from "@/types/pizza_listType"
+import { PizzaListType } from "@/types/pizzaListType"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../ui/card"
 import { TabsContent } from "../ui/tabs"
 import { Avatar, AvatarImage } from "../ui/avatar"
@@ -8,7 +8,7 @@ import { Button } from "../ui/button"
 import { toast } from "sonner"
 import { ShoppingCart } from "lucide-react"
 import { useState } from "react"
-import { usePizza } from "@/contexts/PizzaContext"
+import { usePizza } from "@/contexts/CartContext"
 
 type Props = {
     value: string

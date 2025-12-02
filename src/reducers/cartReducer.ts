@@ -1,13 +1,9 @@
-import { PizzaListType } from "@/types/pizza_listType"
+import { PizzaListType } from "@/types/pizzaListType"
 
 // Define os tipos de ações que o reducer pode receber
 type addCart = {
     type: "add" // Adiciona um item ao carrinho
     payload: PizzaListType
-}
-type removeCart = {
-    type: "remove" // Remove um item do carrinho
-    payload: { id: string }
 }
 type increaseQuantityCart = {
     type: "increase" // Incrementa a quantidade de um item
@@ -19,10 +15,10 @@ type decreaseQuantityCart = {
 }
 
 // União de todos os tipos de ação possíveis
-type acoes = addCart | removeCart | increaseQuantityCart | decreaseQuantityCart
+type acoes = addCart | increaseQuantityCart | decreaseQuantityCart
 
 // Reducer: função pura que recebe o estado atual e uma ação, e retorna o novo estado
-export const pizzaReducer = (itemsCart: PizzaListType[], acao: acoes) => {
+export const cartReducer = (itemsCart: PizzaListType[], acao: acoes) => {
     switch (acao.type) {
 
         case "add":
@@ -44,6 +40,7 @@ export const pizzaReducer = (itemsCart: PizzaListType[], acao: acoes) => {
                         id: crypto.randomUUID(),
                         flavor: acao.payload.flavor,
                         img: acao.payload.img,
+                        category: acao.payload.category,
                         amount: acao.payload.amount,
                         ingredients: acao.payload.ingredients,
                         sizes: acao.payload.sizes,
@@ -52,10 +49,6 @@ export const pizzaReducer = (itemsCart: PizzaListType[], acao: acoes) => {
                     }
                 ]
             }
-
-        case "remove":
-            // Remove o item filtrando pelo id
-            return itemsCart.filter((item) => item.id !== acao.payload.id)
 
         case "increase":
             // Incrementa a quantidade de um item específico

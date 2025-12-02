@@ -1,25 +1,23 @@
 "use client"
-
-import { pizzaReducer } from "@/reducers/pizzaReducer";
-import { PizzaListType } from "@/types/pizza_listType";
+import { cartReducer } from "@/reducers/cartReducer";
+import { PizzaListType } from "@/types/pizzaListType";
 import { createContext, ReactNode, useContext, useMemo, useReducer } from "react";
 
-type PizzaContextType = {
+type CartContextType = {
     itemsCart: PizzaListType[]
     subtotalValue: number
     deliveryValue: number
     addPizza: (item: PizzaListType) => void
-    removePizza: (id: string) => void
     increaseQuantity: (id: string) => void
     decreaseQuantity: (id: string) => void
 }
-export const PizzaContext = createContext<PizzaContextType | null>(null)
+const CartContext = createContext<CartContextType | null>(null)
 
 type Props = {
     children: ReactNode
 }
-export const PizzaProvider = ({ children }: Props) => {
-    const [itemsCart, dispatch] = useReducer(pizzaReducer, [])
+export const CartProvider = ({ children }: Props) => {
+    const [itemsCart, dispatch] = useReducer(cartReducer, [])
 
     const addPizza = (item: PizzaListType) => {
         dispatch({
@@ -28,15 +26,6 @@ export const PizzaProvider = ({ children }: Props) => {
         })
 
         console.log(item)
-    }
-
-    const removePizza = (id: string) => {
-        dispatch({
-            type: "remove",
-            payload: {
-                id
-            }
-        })
     }
 
     const increaseQuantity = (id: string) => {
@@ -65,10 +54,10 @@ export const PizzaProvider = ({ children }: Props) => {
 
     return (
         // Aqui eu criei as funções e passei elas no value do PostContext.Provider, pois é mais seguro do que passar o dispatch direto
-        <PizzaContext.Provider value={{ itemsCart, subtotalValue, deliveryValue:10, addPizza, removePizza, increaseQuantity, decreaseQuantity }}>
+        <CartContext.Provider value={{ itemsCart, subtotalValue, deliveryValue:10, addPizza, increaseQuantity, decreaseQuantity }}>
             {children}
-        </PizzaContext.Provider>
+        </CartContext.Provider>
     )
 }
 
-export const usePizza = () => useContext(PizzaContext)
+export const usePizza = () => useContext(CartContext)

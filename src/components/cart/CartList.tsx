@@ -4,10 +4,13 @@ import { Avatar, AvatarImage } from "../ui/avatar"
 import { Button } from "../ui/button"
 import { Card, CardContent, CardDescription, CardTitle } from "../ui/card"
 import { SheetDescription, SheetTitle } from "../ui/sheet"
-import { usePizza } from "@/contexts/PizzaContext"
+import { usePizza } from "@/contexts/CartContext"
+import { useState } from "react"
+import { Checkout } from "../checkout/Checkout"
 
 export const CartList = () => {
     const pizzaContext = usePizza()
+    const [checkoutOpen, setCheckoutOpen] = useState(false)
     return (
         <>
             {pizzaContext?.itemsCart && pizzaContext.itemsCart.length > 0 &&
@@ -25,9 +28,9 @@ export const CartList = () => {
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <Button onClick={() => pizzaContext.decreaseQuantity(item.id)} className="size-6"><Minus /></Button>
+                                    <Button onClick={() => pizzaContext.decreaseQuantity(item.id)} className="size-6 cursor-pointer"><Minus /></Button>
                                     <div className="text-lg">{item.amount}</div>
-                                    <Button onClick={() => pizzaContext.increaseQuantity(item.id)} className="size-6"><Plus /></Button>
+                                    <Button onClick={() => pizzaContext.increaseQuantity(item.id)} className="size-6 cursor-pointer"><Plus /></Button>
                                 </div>
                             </CardContent>
                         </Card>
@@ -45,6 +48,7 @@ export const CartList = () => {
                             <SheetTitle className="text-md font-light">Total</SheetTitle>
                             <SheetTitle className="text-md font-light">R$ {(pizzaContext.subtotalValue + pizzaContext.deliveryValue).toFixed(2)}</SheetTitle>
                         </div>
+
                     </div>
                     <AlertDialog>
                         <AlertDialogTrigger asChild>
@@ -61,7 +65,7 @@ export const CartList = () => {
                             </AlertDialogHeader>
                             <AlertDialogFooter>
                                 <AlertDialogCancel className="cursor-pointer">Cancelar</AlertDialogCancel>
-                                <AlertDialogAction className="cursor-pointer">Confirmar</AlertDialogAction>
+                                <AlertDialogAction onClick={() => setCheckoutOpen(true)} className="cursor-pointer">Confirmar</AlertDialogAction>
                             </AlertDialogFooter>
                         </AlertDialogContent>
                     </AlertDialog>
@@ -72,6 +76,11 @@ export const CartList = () => {
                     <Frown size={80} />
                     Ops, o carrinho está vazio.
                 </SheetDescription>
+            }
+
+
+            {checkoutOpen &&
+                <Checkout open={checkoutOpen} onOpenChange={setCheckoutOpen}/>
             }
         </>
     )

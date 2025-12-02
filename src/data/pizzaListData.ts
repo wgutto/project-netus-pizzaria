@@ -1,4 +1,4 @@
-import { PizzaListType } from "@/types/pizza_listType";
+import { PizzaListType } from "@/types/pizzaListType";
 
 export const AllPizzasList: PizzaListType[] = [
     // -------------------
@@ -172,10 +172,6 @@ export const AllPizzasList: PizzaListType[] = [
         ],
         price: 36.5
     },
-
-    // -------------------
-    // PIZZAS DOCES
-    // -------------------
     {
         id: crypto.randomUUID(),
         img: "/pizzas-images/pizza-sweet.png",
