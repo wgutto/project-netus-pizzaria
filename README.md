@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🍕 Pizzaria Online
 
-## Getting Started
+Site desenvolvido com Next.js, React, Tailwind, React Hook Form, Zod e TypeScript, onde o usuário escolhe sabores e tamanhos de pizza, adiciona ao carrinho e finaliza o pedido via WhatsApp.
 
-First, run the development server:
+🚀 Demonstração
 
-```bash
+🔗 Site hospedado: https://project-netus-pizzaria.vercel.app
+🔗 Repositório: https://github.com/wgutto/project-netus-pizzaria
+
+⸻
+
+📌 Funcionalidades
+	•	Cardápio com sabores, tamanhos e preços.
+	•	Carrinho para ajustar quantidades e ver o total.
+	•	Finalização do pedido via alert (nome e endereço).
+	•	Envio automático do pedido + dados de entrega para o WhatsApp.
+
+⸻
+
+🛠️ Tecnologias
+	•	Next.js
+	•	React
+	•	TypeScript
+	•	Tailwind CSS
+	•	React Hook Form
+	•	Zod (validação)
+
+⸻
+
+▶️ Como rodar
+
+git clone https://github.com/wgutto/project-netus-pizzaria
+cd project-netus-pizzaria
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra: http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+⸻
 
-## Learn More
+📲 Envio para WhatsApp
 
-To learn more about Next.js, take a look at the following resources:
+O pedido é formatado com:
+	•	Nome do cliente
+	•	Endereço
+	•	Itens do carrinho
+	•	Total
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+E enviado automaticamente via link do WhatsApp.
