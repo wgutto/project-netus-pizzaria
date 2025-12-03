@@ -1,50 +1,39 @@
-🍕 Pizzaria Online
+# 🍕 Pizzaria Online
 
-Site desenvolvido com Next.js, React, Tailwind, React Hook Form, Zod e TypeScript, onde o usuário escolhe sabores e tamanhos de pizza, adiciona ao carrinho e finaliza o pedido via WhatsApp.
+Site desenvolvido com **Next.js**, **React**, **TypeScript**, **Tailwind**, **React Hook Form** e **Zod**, onde o usuário escolhe sabores e tamanhos de pizza, adiciona ao carrinho e finaliza o pedido via WhatsApp.
 
-🚀 Demonstração
+## 🚀 Demonstração  
+🔗 **Site hospedado:** https://project-netus-pizzaria.vercel.app
+🔗 **Repositório:** https://github.com/wgutto/project-netus-pizzaria
 
-🔗 Site hospedado: https://project-netus-pizzaria.vercel.app
-🔗 Repositório: https://github.com/wgutto/project-netus-pizzaria
+## 📌 Funcionalidades
+- Cardápio com sabores, tamanhos e preços  
+- Carrinho para ajustar quantidades e visualizar o total  
+- Finalização do pedido via alert (nome e endereço)  
+- Envio automático do pedido e dados de entrega para o WhatsApp  
 
-⸻
+## 🛠️ Tecnologias
+- Next.js  
+- React  
+- TypeScript  
+- Tailwind CSS  
+- React Hook Form  
+- Zod  
 
-📌 Funcionalidades
-	•	Cardápio com sabores, tamanhos e preços.
-	•	Carrinho para ajustar quantidades e ver o total.
-	•	Finalização do pedido via alert (nome e endereço).
-	•	Envio automático do pedido + dados de entrega para o WhatsApp.
+## ▶️ Como rodar
 
-⸻
-
-🛠️ Tecnologias
-	•	Next.js
-	•	React
-	•	TypeScript
-	•	Tailwind CSS
-	•	React Hook Form
-	•	Zod (validação)
-
-⸻
-
-▶️ Como rodar
-
+```bash
 git clone https://github.com/wgutto/project-netus-pizzaria
 cd project-netus-pizzaria
 npm install
 npm run dev
 
-Abra: http://localhost:3000
+Acesse: http://localhost:3000
 
+## 📲 Envio para WhatsApp
 
-⸻
-
-📲 Envio para WhatsApp
-
-O pedido é formatado com:
+O pedido é enviado automaticamente para o WhatsApp contendo:
 	•	Nome do cliente
-	•	Endereço
+	•	Endereço de entrega
 	•	Itens do carrinho
-	•	Total
-
-E enviado automaticamente via link do WhatsApp.
+	•	Valor total
