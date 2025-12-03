@@ -3,7 +3,7 @@
 Site desenvolvido com **Next.js**, **React**, **TypeScript**, **Tailwind**, **React Hook Form** e **Zod**, onde o usuário escolhe sabores e tamanhos de pizza, adiciona ao carrinho e finaliza o pedido via WhatsApp.
 
 ## 🚀 Demonstração  
-🔗 **Site hospedado:** https://project-netus-pizzaria.vercel.app
+🔗 **Site hospedado:** https://project-netus-pizzaria.vercel.app  
 🔗 **Repositório:** https://github.com/wgutto/project-netus-pizzaria
 
 ## 📌 Funcionalidades
@@ -31,7 +31,7 @@ npm run dev
 
 Acesse: http://localhost:3000
 
-## 📲 Envio para WhatsApp
+##📲 Envio para WhatsApp
 
 O pedido é enviado automaticamente para o WhatsApp contendo:
 	•	Nome do cliente
