@@ -1,6 +1,6 @@
 import { useUser } from "@/contexts/UserContext"
 import { Button } from "../ui/button"
-import Link from "next/link"
+// no external Link import needed (we use a plain anchor for external URL)
 import { usePizza } from "@/contexts/CartContext"
 
 export const StepFinish = () => {
@@ -22,8 +22,10 @@ export const StepFinish = () => {
 
     const message = `Olá, segue meu pedido!\n\n*Dados para entrega:*\n\nNome: *${user?.name || ""}*\nEndereço: *${user?.address?.street || ""}, ${user?.address?.number || ""}${user?.address?.complement ? `, ${user.address.complement}` : ""}*\nBairro: *${user?.address?.district || ""}*\nCidade / UF: *${user?.address?.city || ""} / ${user?.address?.state || ""}*\n\n*Pedido:*\n${itemsText}\n\nSubtotal: *R$ ${subtotal.toFixed(2)}*\nEntrega: *R$ ${delivery.toFixed(2)}*\nTotal: *R$ ${total.toFixed(2)}*\n\nPor favor, confirme o recebimento desta mensagem e informe a previsão de entrega.\n\nAtenciosamente,\n*Equipe Net'us Pizzaria*`;
 
-    const phone = process.env.NEXT_PUBLIC_WHATSAPP
-    const linkWhatsApp = `https://wa.me//${phone}?text=${encodeURIComponent(message)}` 
+    const rawPhone = process.env.NEXT_PUBLIC_WHATSAPP || ""
+    // Remove tudo que não for dígito para garantir formato internacional (ex: 5511999999999)
+    const phone = rawPhone.replace(/\D/g, "")
+    const linkWhatsApp = phone ? `https://wa.me/${phone}?text=${encodeURIComponent(message)}` : "#"
 
     return (
         <div className="flex flex-col">
@@ -34,8 +36,15 @@ export const StepFinish = () => {
                 Envie seu pedido pelo WhatsApp para finalizarmos a compra. Nosso(a) atendente dará continuidade ao atendimento.
             </p>
 
-            <Button className="flex self-center mt-5 bg-green-600 text-white cursor-pointer hover:bg-green-700">
-                <Link target="_blank" href={linkWhatsApp}>Enviar para o WhatsApp</Link>
+            <Button
+                className={`flex self-center mt-5 ${phone ? "bg-green-600 text-white hover:bg-green-700" : "bg-gray-300 text-gray-700 cursor-not-allowed"}`}
+                disabled={!phone}
+            >
+                {phone ? (
+                    <a href={linkWhatsApp} target="_blank" rel="noopener noreferrer">Enviar para o WhatsApp</a>
+                ) : (
+                    "Número do WhatsApp não configurado"
+                )}
             </Button>
 
         </div>
