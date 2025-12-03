@@ -1,4 +1,4 @@
-# 🍕 Pizzaria Online
+## 🍕 Pizzaria Online
 
 Site desenvolvido com **Next.js**, **React**, **TypeScript**, **Tailwind**, **React Hook Form** e **Zod**, onde o usuário escolhe sabores e tamanhos de pizza, adiciona ao carrinho e finaliza o pedido via WhatsApp.
 
@@ -31,10 +31,10 @@ npm run dev
 
 Acesse: http://localhost:3000
 
-##📲 Envio para WhatsApp
+## 📲 Envio para WhatsApp
 
 O pedido é enviado automaticamente para o WhatsApp contendo:
-	•	Nome do cliente
-	•	Endereço de entrega
-	•	Itens do carrinho
-	•	Valor total
+	•	Nome do cliente  
+	•	Endereço de entrega  
+	•	Itens do carrinho  
+	•	Valor total  
