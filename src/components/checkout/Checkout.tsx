@@ -28,7 +28,7 @@ export const Checkout = ({ open, onOpenChange }: Props) => {
     }
 
     return (
-        <Dialog open={open} onOpenChange={(value) => onOpenChange(value)}>
+        <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent>
                 <DialogHeader>
                     <DialogTitle className="text-left">
