@@ -27,6 +27,7 @@ git clone https://github.com/wgutto/project-netus-pizzaria
 cd project-netus-pizzaria
 npm install
 npm run dev
+```
 
 Acesse: http://localhost:3000
 
