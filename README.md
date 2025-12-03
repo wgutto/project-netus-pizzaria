@@ -33,7 +33,7 @@ Acesse: http://localhost:3000
 
 ## 📲 Envio para WhatsApp
 
-O pedido é enviado automaticamente para o WhatsApp contendo:
+O pedido é enviado automaticamente para o WhatsApp contendo:  
 	•	Nome do cliente  
 	•	Endereço de entrega  
 	•	Itens do carrinho  
