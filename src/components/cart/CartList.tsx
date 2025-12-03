@@ -52,7 +52,7 @@ export const CartList = () => {
                     </div>
                     <AlertDialog>
                         <AlertDialogTrigger asChild>
-                            <Button className="w-full cursor-pointer">
+                            <Button className="w-full cursor-pointer mb-5">
                                 Finalizar pedido
                             </Button>
                         </AlertDialogTrigger>

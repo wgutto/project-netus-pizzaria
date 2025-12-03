@@ -19,7 +19,7 @@ export const Cart = () => {
                             }
                         </Button>
                 </SheetTrigger>
-                <SheetContent>
+                <SheetContent className="overflow-y-auto">
                     <SheetHeader className="pb-2">
                         <SheetTitle className="text-3xl">Carrinho</SheetTitle>
                         <SheetDescription>
