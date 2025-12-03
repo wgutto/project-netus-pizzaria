@@ -13,7 +13,7 @@ const formSchema = z.object({
     street: z.string().min(2, "Preencha o campo endereço."),
     number: z.string().min(1, "Preencha o campo número."),
     complement: z.string().optional(),
-    district: z.string("Preencha o campo corretamente."),
+    district: z.string("Preencha o campo corretamente.").min(2, "Preencha o campo bairro."),
     city: z.string("Preencha o campo corretamente.").min(2, "Preencha o campo cidade."),
     state: z.string("Preencha o campo corretamente.").min(2, "Preencha o campo estado.")
 })
@@ -38,7 +38,6 @@ export const StepAddress = ({ setSteps }: Props) => {
 
     const onSubmit = (values: z.infer<typeof formSchema>) => {
         userContext?.addAddress(values.street, values.number, values.complement, values.district, values.city, values.state)
-        console.log(values)
         setSteps("finish")
     }
 
@@ -46,7 +45,7 @@ export const StepAddress = ({ setSteps }: Props) => {
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
 
-                <div className="h-fit flex gap-5">
+                <div className="flex gap-5">
                     <FormField
                         control={form.control}
                         name="street"
@@ -75,19 +74,35 @@ export const StepAddress = ({ setSteps }: Props) => {
                     />
                 </div>
 
-                <FormField
-                    control={form.control}
-                    name="complement"
-                    render={({ field }) => (
-                        <FormItem className="w-full">
-                            <FormLabel>Complemento</FormLabel>
-                            <FormControl>
-                                <Input placeholder="Apto, bloco, casa, lote… (opcional)" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
+                <div className="flex gap-5">
+                    <FormField
+                        control={form.control}
+                        name="complement"
+                        render={({ field }) => (
+                            <FormItem className="w-full">
+                                <FormLabel>Complemento</FormLabel>
+                                <FormControl>
+                                    <Input placeholder="Apto, bloco, casa, lote… (opcional)" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+
+                    <FormField
+                        control={form.control}
+                        name="district"
+                        render={({ field }) => (
+                            <FormItem className="w-full">
+                                <FormLabel>Bairro</FormLabel>
+                                <FormControl>
+                                    <Input placeholder="Nome do seu bairro" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+                </div>
 
                 <div className="flex gap-5">
                     <FormField
@@ -116,9 +131,9 @@ export const StepAddress = ({ setSteps }: Props) => {
                                             <SelectValue placeholder="Selecione o estado" />
                                         </SelectTrigger>
                                         <SelectContent>
-                                            <SelectItem value="ce">Ceará, CE</SelectItem>
-                                            <SelectItem value="mg">Minas Gerais, MG</SelectItem>
-                                            <SelectItem value="pr">Curitiba, PR</SelectItem>
+                                            <SelectItem value="CE">Ceará, CE</SelectItem>
+                                            <SelectItem value="MG">Minas Gerais, MG</SelectItem>
+                                            <SelectItem value="PR">Curitiba, PR</SelectItem>
                                         </SelectContent>
                                     </Select>
                                 </FormControl>

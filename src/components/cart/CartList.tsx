@@ -80,7 +80,7 @@ export const CartList = () => {
 
 
             {checkoutOpen &&
-                <Checkout open={checkoutOpen} onOpenChange={setCheckoutOpen}/>
+                    <Checkout open={checkoutOpen} onOpenChange={setCheckoutOpen}/>
             }
         </>
     )

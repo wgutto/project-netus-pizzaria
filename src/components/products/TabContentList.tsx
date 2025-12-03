@@ -21,7 +21,7 @@ export const TabContentList = ({ value, products }: Props) => {
     return (
         <TabsContent value={value}>
             {products.length > 0 &&
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 my-6">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6 my-6">
                     {products.map((item) =>
                         <Card key={item.id}>
                             <CardHeader className="flex justify-center">
@@ -52,7 +52,7 @@ export const TabContentList = ({ value, products }: Props) => {
                                     }
                                 >
                                     <SelectTrigger className="mx-auto">
-                                        <SelectValue placeholder="Selecione o tamanho" />
+                                        <SelectValue className="overflow-x-scroll" placeholder="Selecione o tamanho" />
                                     </SelectTrigger>
                                     <SelectContent>
                                         <SelectGroup>
@@ -64,7 +64,7 @@ export const TabContentList = ({ value, products }: Props) => {
                                 </Select>
                             </CardContent>
 
-                            <CardFooter className="flex items-center justify-between">
+                            <CardFooter className="flex flex-col items-center justify-between sm:flex-row gap-5">
 
                                 <CardTitle>
                                     R$ {

@@ -5,6 +5,7 @@ import { Header } from "@/components/interface/Header"
 import { PizzaList } from "@/components/products/PizzaList"
 import { SkeletonList } from "@/components/products/Skeleton"
 import { CartProvider } from "@/contexts/CartContext"
+import { UserProvider } from "@/contexts/UserContext"
 import { Suspense } from "react"
 
 const Page = () => {
@@ -12,13 +13,15 @@ const Page = () => {
     <div className="min-h-screen flex flex-col">
 
       <CartProvider>
-        <Header />
+        <UserProvider>
+          <Header />
 
         <main className="flex-1 mb-5 p-4">
           <Suspense fallback={<SkeletonList/>}>
             <PizzaList/>
           </Suspense>
         </main>
+        </UserProvider>
       </CartProvider>
 
       <Footer />

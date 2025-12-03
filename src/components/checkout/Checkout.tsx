@@ -1,13 +1,14 @@
-import { useState } from "react"
+import { Dispatch, SetStateAction, useState } from "react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../ui/dialog"
 import { StepUser } from "./StepUser"
 import { StepAddress } from "./StepAddress"
 import { Progress } from "../ui/progress"
 import { CheckoutSteps } from "@/types/checkoutSteps"
+import { StepFinish } from "./StepFinish"
 
 type Props = {
     open: boolean
-    onOpenChange: () => void
+    onOpenChange: Dispatch<SetStateAction<boolean>>
 }
 export const Checkout = ({ open, onOpenChange }: Props) => {
     const [steps, setSteps] = useState<CheckoutSteps>("user")
@@ -27,10 +28,10 @@ export const Checkout = ({ open, onOpenChange }: Props) => {
     }
 
     return (
-        <Dialog open={open} onOpenChange={onOpenChange}>
+        <Dialog open={open} onOpenChange={(value) => onOpenChange(value)}>
             <DialogContent>
                 <DialogHeader>
-                    <DialogTitle>
+                    <DialogTitle className="text-left">
                         {steps === "user" &&
                             "Qual o seu nome?"
                         }
@@ -40,7 +41,7 @@ export const Checkout = ({ open, onOpenChange }: Props) => {
                         }
 
                         {steps === "finish" &&
-                            "Enviar pro WhatsApp"
+                            "Envio para o WhatsApp"
                         }
                     </DialogTitle>
                 </DialogHeader>
@@ -49,7 +50,7 @@ export const Checkout = ({ open, onOpenChange }: Props) => {
 
                 {steps === "user" && <StepUser setSteps={setSteps}/>}
                 {steps === "address" && <StepAddress setSteps={setSteps}/>}
-                {steps === "finish" && <p>Whats</p>}
+                {steps === "finish" && <StepFinish/>}
 
             </DialogContent>
         </Dialog>

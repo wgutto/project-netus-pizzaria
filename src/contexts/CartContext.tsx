@@ -24,8 +24,6 @@ export const CartProvider = ({ children }: Props) => {
             type: "add",
             payload: item
         })
-
-        console.log(item)
     }
 
     const increaseQuantity = (id: string) => {
