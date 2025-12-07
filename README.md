@@ -1,40 +1,32 @@
-## 🍕 Pizzaria Online
+﻿#  Net'us Pizzaria
 
-Site desenvolvido com **Next.js**, **React**, **TypeScript**, **Tailwind**, **React Hook Form** e **Zod**, onde o usuário escolhe sabores e tamanhos de pizza, adiciona ao carrinho e finaliza o pedido via WhatsApp.
+Plataforma de pedidos online para pizzaria com integração WhatsApp. Usuários escolhem pizzas, adicionam ao carrinho e finalizam o pedido enviando automáticamente os dados para o WhatsApp do lojista.
 
-## 🚀 Demonstração  
-🔗 **Site hospedado:** https://project-netus-pizzaria.vercel.app  
-🔗 **Repositório:** https://github.com/wgutto/project-netus-pizzaria
+##  Links
+-  **Site:** https://project-netus-pizzaria.vercel.app
+-  **Código:** https://github.com/wgutto/project-netus-pizzaria
 
-## 📌 Funcionalidades
-- Cardápio com sabores, tamanhos e preços  
-- Carrinho para ajustar quantidades e visualizar o total  
-- Finalização do pedido via alert (nome e endereço)  
-- Envio automático do pedido e dados de entrega para o WhatsApp  
+##  Tecnologias
+- **Next.js 14** - Framework React com SSR/SSG
+- **React 18** - UI components
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **React Hook Form + Zod** - Validação de formulários
+- **Radix UI** - Componentes acessíveis
+- **Sonner** - Notificações toast
+- **next-themes** - Dark/Light mode
 
-## 🛠️ Tecnologias
-- Next.js  
-- React  
-- TypeScript  
-- Tailwind CSS  
-- React Hook Form  
-- Zod  
+##  Principais Funcionalidades
+-  **Carrinho** com cálculo automático de subtotal + entrega
+-  **Integração WhatsApp** com mensagem formatada do pedido
+-  **Dark/Light mode** com persistência
+-  **Design responsivo** mobile-first
+-  **Validação em tempo real** dos formulários
 
-## ▶️ Como rodar
-
-```bash
-git clone https://github.com/wgutto/project-netus-pizzaria
-cd project-netus-pizzaria
-npm install
-npm run dev
-```
-
-Acesse: http://localhost:3000
-
-## 📲 Envio para WhatsApp
-
-O pedido é enviado para o WhatsApp contendo:  
-	•	Nome do cliente  
-	•	Endereço de entrega  
-	•	Itens do carrinho  
-	•	Valor total  
+##  Fluxo do Usuário
+1. Visualiza catálogo de pizzas
+2. Seleciona tamanho e adiciona ao carrinho
+3. Ajusta quantidades no carrinho
+4. Clica "Finalizar Pedido"
+5. Preenche nome e endereço
+6. Enviar para WhatsApp (abre chat com pedido formatado)
