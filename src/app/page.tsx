@@ -1,11 +1,11 @@
 "use client"
 
-import { Footer } from "@/components/interface/Footer"
-import { Header } from "@/components/interface/Header"
+import { Footer } from "@/components/layout/Footer"
+import { Header } from "@/components/layout/Header"
 import { PizzaList } from "@/components/products/PizzaList"
 import { SkeletonList } from "@/components/products/Skeleton"
-import { CartProvider } from "@/contexts/CartContext"
-import { UserProvider } from "@/contexts/UserContext"
+import { CartProvider } from "@/features/cart/context/CartContext"
+import { UserProvider } from "@/features/user/context/UserContext"
 import { Suspense } from "react"
 
 const Page = () => {

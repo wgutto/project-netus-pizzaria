@@ -4,7 +4,7 @@ import { ShoppingCart } from "lucide-react"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet"
 import { CartList } from "./CartList"
 import { Button } from "../ui/button"
-import { usePizza } from "@/contexts/CartContext"
+import { usePizza } from "@/features/cart/context/CartContext"
 
 export const Cart = () => {
     const pizzaContext = usePizza()

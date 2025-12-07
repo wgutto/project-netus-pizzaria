@@ -7,7 +7,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "../ui/input"
 import { Button } from "../ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select"
-import { useUser } from "@/contexts/UserContext"
+import { useUser } from "@/features/user/context/UserContext"
 
 const formSchema = z.object({
     street: z.string().min(2, "Preencha o campo endereço."),

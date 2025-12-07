@@ -4,7 +4,7 @@ import { Avatar, AvatarImage } from "../ui/avatar"
 import { Button } from "../ui/button"
 import { Card, CardContent, CardDescription, CardTitle } from "../ui/card"
 import { SheetDescription, SheetTitle } from "../ui/sheet"
-import { usePizza } from "@/contexts/CartContext"
+import { usePizza } from "@/features/cart/context/CartContext"
 import { useState } from "react"
 import { Checkout } from "../checkout/Checkout"
 

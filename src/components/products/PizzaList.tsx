@@ -3,7 +3,7 @@
 import { TabContentList } from "./TabContentList"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../ui/tabs"
 import { Frown } from "lucide-react"
-import { AllPizzasList } from "@/data/pizzaListData"
+import { AllPizzasList } from "@/constants/pizzaListData"
 import { PizzaListType } from "@/types/pizzaListType"
 
 type Tab = {

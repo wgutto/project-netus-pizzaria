@@ -1,4 +1,4 @@
-import { userReducer } from "@/reducers/userReducer";
+import { userReducer } from "@/features/user/reducer/userReducer";
 import { UserType } from "@/types/userType";
 import { createContext, ReactNode, useContext, useReducer } from "react";
 

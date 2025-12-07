@@ -1,7 +1,7 @@
-import { useUser } from "@/contexts/UserContext"
+import { useUser } from "@/features/user/context/UserContext"
 import { Button } from "../ui/button"
 // no external Link import needed (we use a plain anchor for external URL)
-import { usePizza } from "@/contexts/CartContext"
+import { usePizza } from "@/features/cart/context/CartContext"
 
 export const StepFinish = () => {
     const userContext = useUser()

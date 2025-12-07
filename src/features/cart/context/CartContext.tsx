@@ -1,5 +1,5 @@
 "use client"
-import { cartReducer } from "@/reducers/cartReducer";
+import { cartReducer } from "@/features/cart/reducer/cartReducer";
 import { PizzaListType } from "@/types/pizzaListType";
 import { createContext, ReactNode, useContext, useMemo, useReducer } from "react";
 
